@@ -1,0 +1,12 @@
+{
+  "name": "hormozi-offer-audit",
+  "description": "Audit and improve a sales offer (landing page, pricing tier, or lead magnet) using Alex Hormozi's frameworks from $100M Offers and $100M Leads. Returns a scored audit with prioritized fixes. Optional pre-audit research mode for deriving missing inputs.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Eric Forte",
+    "url": "https://www.ericforte.com"
+  },
+  "homepage": "https://github.com/johnericforte/claude-skill-hormozi-offer-audit",
+  "repository": "https://github.com/johnericforte/claude-skill-hormozi-offer-audit",
+  "license": "MIT"
+}

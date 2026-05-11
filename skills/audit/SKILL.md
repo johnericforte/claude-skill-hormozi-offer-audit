@@ -1,5 +1,4 @@
 ---
-name: hormozi-offer-audit
 description: Audit and improve a sales offer (landing page, pricing tier, or lead magnet) using Alex Hormozi's frameworks from $100M Offers and $100M Leads. Returns a scored audit with prioritized fixes. Optional pre-audit research mode for deriving missing inputs (Dream Outcome, target buyer, market filter signals).
 ---
 
@@ -274,9 +273,9 @@ Weakest lever: **Dream Outcome.**
 
 ## Companion skills
 
-- **`cialdini-influence-audit`** — for persuasion principle audit (7 principles + Pre-Suasion). Run on the same offer copy after the Hormozi audit to find missing influence levers. Repo: `https://github.com/johnericforte/claude-skill-cialdini-influence-audit`.
-- **`claude-blog-assistant`** — if the offer lives inside a blog post, this orchestrator wraps the full publishing lifecycle (brief → write → humanize → SEO check → schema → analyze → repurpose) AND audits existing posts. Pair the Hormozi offer audit with the blog-assistant publishing flow when shipping new content. Repo: `https://github.com/johnericforte/claude-skill-blog-assistant`.
-- **`humanizer`** — invoked automatically as the final pass on the audit's "After" copy if installed. Repo: `https://github.com/blader/humanizer`.
+- **`cialdini-influence-audit:audit`** — for persuasion principle audit (7 principles + Pre-Suasion). Run on the same offer copy after the Hormozi audit to find missing influence levers. Repo: `https://github.com/johnericforte/claude-skill-cialdini-influence-audit`.
+- **`claude-blog-assistant:assistant`** — if the offer lives inside a blog post, this orchestrator wraps the full publishing lifecycle (brief → write → humanize → SEO check → schema → analyze → repurpose) AND audits existing posts. Pair the Hormozi offer audit with the blog-assistant publishing flow when shipping new content. Repo: `https://github.com/johnericforte/claude-skill-blog-assistant`.
+- **`humanizer`** — invoked automatically as the final pass on the audit's "After" copy if installed (standalone skill, not plugin-namespaced). Repo: `https://github.com/blader/humanizer`.
 
 ---
 
