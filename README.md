@@ -4,6 +4,8 @@
 [![Built for Claude](https://img.shields.io/badge/Built%20for-Claude-D97757)](https://claude.com)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](#)
 
+**Full write-up:** [ericforte.com/blog/3-claude-code-skills-i-built](https://www.ericforte.com/blog/3-claude-code-skills-i-built)
+
 > A Claude skill that audits an existing sales offer (landing page, pricing tier, or lead magnet) using Alex Hormozi's frameworks from $100M Offers and $100M Leads. Returns a scored audit with prioritized fixes.
 
 You drop your landing page, your pricing tier, or your lead magnet into Claude. The skill scores the offer against the Value Equation, runs the Grand Slam checklist, and returns a Top 3 Fixes block you can ship the same day.
