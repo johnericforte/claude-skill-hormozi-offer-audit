@@ -24,21 +24,38 @@ It covers both books: $100M Offers (Value Equation, Grand Slam, Pre-Offer Market
 
 ## Install
 
-Clone into your Claude Code skills directory:
+Skills do not sync across surfaces (per [Anthropic's Agent Skills docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#cross-surface-availability)). Install on each surface where you want to run this skill.
+
+### Claude Code (CLI)
+
+Two paths. Use git clone today; the plugin marketplace listing is pending Anthropic approval.
+
+**Option A: git clone (works today).** Clone the repo and load it with the `--plugin-dir` flag:
 
 ```bash
-git clone https://github.com/johnericforte/claude-skill-hormozi-offer-audit.git ~/.claude/skills/hormozi-offer-audit
+git clone https://github.com/johnericforte/claude-skill-hormozi-offer-audit.git ~/claude-plugins/hormozi-offer-audit
+claude --plugin-dir ~/claude-plugins/hormozi-offer-audit
 ```
 
-Restart Claude Code (or start a new session). The skill will be available via the `Skill` tool.
+To verify the plugin loaded, run `/help` in Claude Code. You should see `hormozi-offer-audit:audit` listed.
 
-To verify it loaded, ask Claude:
+**Option B: Plugin marketplace (pending Anthropic approval).** Once the listing lands:
 
 ```
-What does the hormozi-offer-audit skill do?
+/plugin install hormozi-offer-audit
 ```
 
-If the skill is installed correctly, Claude reads its description from `SKILL.md` and answers based on that.
+### claude.ai (web) / Claude Desktop
+
+ZIP the `skills/audit/` directory and upload it via **Settings → Features → Skills** on claude.ai. The skill syncs to Claude Desktop through your account. Requires a Pro, Max, Team, or Enterprise plan with code execution enabled. See [Anthropic's docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) for plan requirements and limits.
+
+### Invocation (Claude Code)
+
+Once loaded in Claude Code, invoke the skill with the plugin-namespaced name:
+
+```
+/hormozi-offer-audit:audit
+```
 
 ### Optional dependency: `humanizer`
 
@@ -47,6 +64,8 @@ The skill works best with the [`humanizer`](https://github.com/blader/humanizer)
 ```bash
 git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
 ```
+
+`humanizer` is a standalone skill (not a plugin), so it installs to the standard `~/.claude/skills/` directory.
 
 If you decline, the skill ships the audit without the humanizer pass and labels it accordingly.
 
@@ -57,7 +76,7 @@ If you decline, the skill ships the audit without the humanizer pass and labels 
 Once installed, invoke the skill via Claude:
 
 ```
-Use the hormozi-offer-audit skill on this landing page hero:
+Use the hormozi-offer-audit:audit skill on this landing page hero:
 
 "Cliently is the all-in-one client management tool. Powerful features. Easy to use. Try free for 14 days."
 
